@@ -1,0 +1,45 @@
+body {
+  height: 80vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pacman {
+    width: 150px;
+    height: 150px;
+}
+
+.pacman>div {
+  background-color: #ff0;
+  height: 50%;
+  width: 100%
+}
+
+.pacman-top {
+  border-radius: 100px 100px 0 0;
+  animation: spinTop .5s infinite linear;
+}
+.pacman-bottom {
+  border-radius: 0 0 100px 100px;
+  animation: spinBottom .5s infinite linear;
+}
+
+@keyframes spinTop {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(-35deg)
+    }
+}
+
+@keyframes spinBottom {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(35deg)
+    }
+}
